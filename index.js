@@ -10,7 +10,6 @@ const app = express();
 app.use(cors())
 const parseUrl = express.urlencoded({ extended: false });
 const parseJson = express.json({ extended: false });
-
 const PORT = process.env.PORT || 4100;
 
 
