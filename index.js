@@ -19,12 +19,13 @@ app.post("/paynow", [parseUrl, parseJson], (req, res) => {
   var paymentDetails = {
     orderID: req.body.id,
     amount: req.body.cost,
-    customerId: Math.random()*100000,
+    customerId:Math.random()*100000,
     customerEmail: req.body.email,
     customerPhone: req.body.phone,
     customerRest: req.body.rest_name
 }
 console.log(paymentDetails ,"check")
+console.log( orderID,amount,customerId, customerEmail,customerPhone, customerRest)
 if(!paymentDetails.amount || !paymentDetails.customerId || !paymentDetails.customerEmail || !paymentDetails.customerPhone || !paymentDetails.customerRest) {
     res.status(400).send('Payment failed')
 } else {
